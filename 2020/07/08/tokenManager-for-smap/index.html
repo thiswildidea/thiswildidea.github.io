@@ -1,0 +1,455 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>tokenManager for smap | thiswildidea blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="yangyiwen">
+    
+
+    
+    <meta name="description" content="上海市测绘院公共服务平台、ArcGIS、Portal 统一token 管理器 目录 平台token管理器 平台token调用方式平台token管理器以上tokenManager 界面中 相关参数说明如下：  地图Token 配置名称： 唯一配置名称，不允许重复，通过这个token 配置名称，获取平台token配置信息，调用时候后台会根据token 配置信息生成token. 用户名：平台授权的用户">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tokenManager for smap">
+<meta property="og:url" content="http://thiswildidea.github.io/2020/07/08/tokenManager-for-smap/index.html">
+<meta property="og:site_name" content="thiswildidea blog">
+<meta property="og:description" content="上海市测绘院公共服务平台、ArcGIS、Portal 统一token 管理器 目录 平台token管理器 平台token调用方式平台token管理器以上tokenManager 界面中 相关参数说明如下：  地图Token 配置名称： 唯一配置名称，不允许重复，通过这个token 配置名称，获取平台token配置信息，调用时候后台会根据token 配置信息生成token. 用户名：平台授权的用户">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/thiswildidea/images/raw/master/token/tokenManagerUrl.png">
+<meta property="article:published_time" content="2020-07-08T14:16:39.000Z">
+<meta property="article:modified_time" content="2020-07-09T02:57:48.694Z">
+<meta property="article:author" content="yangyiwen">
+<meta property="article:tag" content="token">
+<meta property="article:tag" content="arcgis">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/thiswildidea/images/raw/master/token/tokenManagerUrl.png">
+
+    
+    <link rel="alternative" href="/atom.xml" title="thiswildidea blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/%02.css">
+<link rel="stylesheet" href="/.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="thiswildidea blog" title="thiswildidea blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="thiswildidea blog">thiswildidea blog</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/tags">Tags</a></li>
+					
+						<li><a href="/categories">Categories</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:thiswildidea.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="pos" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2020/07/08/tokenManager-for-smap/" title="tokenManager for smap" itemprop="url">tokenManager for smap</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="yangyiwen" target="_blank" itemprop="author">yangyiwen</a>
+		
+  <p class="article-time">
+    <time datetime="2020-07-08T14:16:39.000Z" itemprop="datePublished"> 发表于 2020-07-08</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目录"><span class="toc-number">1.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#平台token管理器"><span class="toc-number">2.</span> <span class="toc-text">平台token管理器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#平台token调用示例"><span class="toc-number">3.</span> <span class="toc-text">平台token调用示例</span></a></li></ol>
+		
+		</div>
+		
+		<p>上海市测绘院公共服务平台、ArcGIS、Portal 统一token 管理器</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#平台token管理器">平台token管理器</a></li>
+<li><a href="#平台token调用方式">平台token调用方式</a><h2 id="平台token管理器"><a href="#平台token管理器" class="headerlink" title="平台token管理器"></a>平台token管理器</h2><img src="https://gitee.com/thiswildidea/images/raw/master/token/tokenManagerUrl.png" alt="Image text"><br>以上tokenManager 界面中 相关参数说明如下：</li>
+</ul>
+<p>地图Token 配置名称： 唯一配置名称，不允许重复，通过这个token 配置名称，获取平台token配置信息，调用时候后台会根据token 配置信息生成token.</p>
+<p>用户名：平台授权的用户</p>
+<p>密码：平台授权的用户的密码</p>
+<p>token地址： 平台token获取地址</p>
+<p>token 类型： 主要分为三种类型，包括onemap、arcgis和portal，根据具体平台token 类型选择</p>
+<p>token 标注：标注token信息，便于识别</p>
+<h2 id="平台token调用示例"><a href="#平台token调用示例" class="headerlink" title="平台token调用示例"></a>平台token调用示例</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> url =  <span class="string">'http://10.108.3.16:8401/mapconfig/gistoken'</span></span><br><span class="line"><span class="keyword">const</span> tokenconfigname =<span class="string">'smiapi_new'</span>  <span class="comment">//上步骤中地图Token 配置名称</span></span><br><span class="line"><span class="keyword">const</span> requestParamter = &#123;</span><br><span class="line">            tokenconfigname: tokenconfigname,</span><br><span class="line">            domainName: <span class="built_in">window</span>.location.host <span class="comment">//请求前端地址</span></span><br><span class="line">    &#125;</span><br><span class="line"> axios.post(url, requestParamter).then(<span class="function">(<span class="params">r</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> gistoken = <span class="built_in">JSON</span>.parse(r.data.data).token</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/token/">token</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/token/">token</a><a href="/tags/arcgis/">arcgis</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://thiswildidea.github.io/2020/07/08/tokenManager-for-smap/" data-title="tokenManager for smap | thiswildidea blog" data-tsina="5376033827" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2020/07/08/lightring-for-smap/"  title="light ring for smap">
+ <strong>下一篇：</strong><br/> 
+ <span>light ring for smap
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github 名片</p>
+<div class="github-card" data-github="thiswildidea" data-theme="medium"></div>
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/smap-shsmi/" title="smap-shsmi">smap-shsmi<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/token/" title="token">token<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/smap/" title="smap">smap<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/arcgis/" title="arcgis">arcgis<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/token/" title="token">token<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://developers.arcgis.com/" target="_blank" title="ArcGIS for Developers">ArcGIS for Developers</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=5376033827&verifier=fba80209&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m yangyiwen in shsmi. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/5376033827" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/thiswildidea" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		
+		<a href="/about" target="_blank" title="yangyiwen">yangyiwen</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+ </html>
