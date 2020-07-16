@@ -1,0 +1,486 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>trajectory  playback  in  smap-plugins-shsmi | A blog about maps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="yangyiwen">
+    
+
+    
+    <meta name="description" content="二三维轨迹路径播放 目录 调用示例  三维轨迹播放  二维轨迹播放 参数说明  调用示例三维轨迹播放1234567891011import SMap from &#39;smap-shsmi&#39; &#x2F;&#x2F; 引用SMAPimport Plugins from &#39;smap-plugins-shsmi&#39; &#x2F;&#x2F; 引用Plugins const map &#x3D; new SMap.Map(&#39;container&#39;, &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="trajectory  playback  in  smap-plugins-shsmi">
+<meta property="og:url" content="http://thiswildidea.github.io/2020/07/16/trajectory-playback-in-smap-plugins-shsmi/index.html">
+<meta property="og:site_name" content="A blog about maps">
+<meta property="og:description" content="二三维轨迹路径播放 目录 调用示例  三维轨迹播放  二维轨迹播放 参数说明  调用示例三维轨迹播放1234567891011import SMap from &#39;smap-shsmi&#39; &#x2F;&#x2F; 引用SMAPimport Plugins from &#39;smap-plugins-shsmi&#39; &#x2F;&#x2F; 引用Plugins const map &#x3D; new SMap.Map(&#39;container&#39;, &amp;#123;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/thiswildidea/images/raw/master/smiapi/ts/4x/3d/%E8%BD%A8%E8%BF%B9%E6%92%AD%E6%94%BE/trajectoryplayback.png">
+<meta property="og:image" content="https://gitee.com/thiswildidea/images/raw/master/smiapi/ts/4x/3d/%E8%BD%A8%E8%BF%B9%E6%92%AD%E6%94%BE/trajectoryplayback1.png">
+<meta property="og:image" content="https://gitee.com/thiswildidea/images/raw/master/smiapi/ts/4x/3d/%E8%BD%A8%E8%BF%B9%E6%92%AD%E6%94%BE/trajectory.gif">
+<meta property="og:image" content="https://gitee.com/thiswildidea/images/raw/master/smiapi/ts/4x/2d/%E8%BD%A8%E8%BF%B9%E6%92%AD%E6%94%BE/trajectoryplayback.png">
+<meta property="og:image" content="https://gitee.com/thiswildidea/images/raw/master/smiapi/ts/4x/2d/%E8%BD%A8%E8%BF%B9%E6%92%AD%E6%94%BE/trajectoryplayback1.png">
+<meta property="og:image" content="https://gitee.com/thiswildidea/images/raw/master/smiapi/ts/4x/2d/%E8%BD%A8%E8%BF%B9%E6%92%AD%E6%94%BE/trajectoryplayback.gif">
+<meta property="article:published_time" content="2020-07-16T13:43:13.000Z">
+<meta property="article:modified_time" content="2020-07-16T14:05:15.316Z">
+<meta property="article:author" content="yangyiwen">
+<meta property="article:tag" content="smap">
+<meta property="article:tag" content="plugins">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/thiswildidea/images/raw/master/smiapi/ts/4x/3d/%E8%BD%A8%E8%BF%B9%E6%92%AD%E6%94%BE/trajectoryplayback.png">
+
+    
+    <link rel="alternative" href="/atom.xml" title="A blog about maps" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/%02.css">
+<link rel="stylesheet" href="/.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="A blog about maps" title="A blog about maps"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="A blog about maps">A blog about maps</a></h1>
+				<h2 class="blog-motto">by yangyiwen</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/tags">Tags</a></li>
+					
+						<li><a href="/categories">Categories</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:thiswildidea.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="pos" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2020/07/16/trajectory-playback-in-smap-plugins-shsmi/" title="trajectory  playback  in  smap-plugins-shsmi" itemprop="url">trajectory  playback  in  smap-plugins-shsmi</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="yangyiwen" target="_blank" itemprop="author">yangyiwen</a>
+		
+  <p class="article-time">
+    <time datetime="2020-07-16T13:43:13.000Z" itemprop="datePublished"> 发表于 2020-07-16</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目录"><span class="toc-number">1.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#调用示例"><span class="toc-number">2.</span> <span class="toc-text">调用示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#三维轨迹播放"><span class="toc-number">2.1.</span> <span class="toc-text">三维轨迹播放</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二维轨迹播放"><span class="toc-number">2.2.</span> <span class="toc-text">二维轨迹播放</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数说明"><span class="toc-number">3.</span> <span class="toc-text">参数说明</span></a></li></ol>
+		
+		</div>
+		
+		<p>二三维轨迹路径播放</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#调用示例">调用示例</a><br>  <a href="#三维轨迹播放">三维轨迹播放</a><br>  <a href="#二维轨迹播放">二维轨迹播放</a></li>
+<li><a href="#参数说明">参数说明</a></li>
+</ul>
+<h2 id="调用示例"><a href="#调用示例" class="headerlink" title="调用示例"></a>调用示例</h2><h3 id="三维轨迹播放"><a href="#三维轨迹播放" class="headerlink" title="三维轨迹播放"></a>三维轨迹播放</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> SMap <span class="keyword">from</span> <span class="string">'smap-shsmi'</span> <span class="comment">// 引用SMAP</span></span><br><span class="line"><span class="keyword">import</span> Plugins <span class="keyword">from</span> <span class="string">'smap-plugins-shsmi'</span> <span class="comment">// 引用Plugins</span></span><br><span class="line"> <span class="keyword">const</span> map = <span class="keyword">new</span> SMap.Map(<span class="string">'container'</span>, &#123;</span><br><span class="line">        viewMode: <span class="string">'3D'</span>,</span><br><span class="line">        center: [<span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line">        zoom: <span class="number">4</span>,</span><br><span class="line">        zooms: [<span class="number">0</span>, <span class="number">12</span>],</span><br><span class="line">        pitch: <span class="number">60</span>,</span><br><span class="line">        mapStyle: <span class="string">'smap://styles/dark'</span>,</span><br><span class="line">        showBuildingBlock: <span class="literal">true</span></span><br><span class="line">      &#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> routedata = [</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">358.5185</span>,</span><br><span class="line">    y: <span class="number">-77.2235</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">267.4522</span>,</span><br><span class="line">    y: <span class="number">99.1188</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">234.90484</span>,</span><br><span class="line">    y: <span class="number">212.834811</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">181.7233</span>,</span><br><span class="line">    y: <span class="number">381.1000</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">138.1169</span>,</span><br><span class="line">    y: <span class="number">527.79151</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">88.0071</span>,</span><br><span class="line">    y: <span class="number">647.4898</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">63.1774</span>,</span><br><span class="line">    y: <span class="number">692.2989</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">94.5310</span>,</span><br><span class="line">    y: <span class="number">706.0872</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">143.59157</span>,</span><br><span class="line">    y: <span class="number">595.3354</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">182.1127</span>,</span><br><span class="line">    y: <span class="number">481.7369</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">223.4553</span>,</span><br><span class="line">    y: <span class="number">323.6532</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">248.4933</span>,</span><br><span class="line">    y: <span class="number">203.5321</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">325.065</span>,</span><br><span class="line">    y: <span class="number">31.37497</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">546.1844</span>,</span><br><span class="line">    y: <span class="number">-355.09700</span></span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line"><span class="keyword">const</span> trajectory = <span class="keyword">new</span> Plugins.Trajectory(map.map)</span><br><span class="line">trajectory.playback(&#123;</span><br><span class="line">  coords: routedata,</span><br><span class="line">  showtrail: <span class="literal">true</span>,</span><br><span class="line">  trailsymbol: &#123;</span><br><span class="line">    type: <span class="string">'simple-line'</span>,</span><br><span class="line">    color: [<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.5</span>],</span><br><span class="line">    width: <span class="string">'10px'</span>,</span><br><span class="line">    style: <span class="string">'solid'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  mobilesymbol: &#123;</span><br><span class="line">    type: <span class="string">'point-3d'</span>,</span><br><span class="line">    symbolLayers: [&#123;</span><br><span class="line">      type: <span class="string">'icon'</span>,</span><br><span class="line">      size: <span class="string">'50px'</span>,</span><br><span class="line">      resource: &#123;</span><br><span class="line">        href: <span class="built_in">require</span>(<span class="string">'@/assets/car.png'</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;],</span><br><span class="line">    verticalOffset: &#123;</span><br><span class="line">      screenLength: <span class="number">50</span>,</span><br><span class="line">      maxWorldLength: <span class="number">2000</span>,</span><br><span class="line">      minWorldLength: <span class="number">20</span></span><br><span class="line">    &#125;,</span><br><span class="line">    callout: &#123;</span><br><span class="line">      type: <span class="string">'line'</span>,</span><br><span class="line">      color: [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line">      size: <span class="number">2</span>,</span><br><span class="line">      border: &#123;</span><br><span class="line">        color: [<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/thiswildidea/images/raw/master/smiapi/ts/4x/3d/%E8%BD%A8%E8%BF%B9%E6%92%AD%E6%94%BE/trajectoryplayback.png" alt="三维轨迹播放"><br><img src="https://gitee.com/thiswildidea/images/raw/master/smiapi/ts/4x/3d/%E8%BD%A8%E8%BF%B9%E6%92%AD%E6%94%BE/trajectoryplayback1.png" alt="三维轨迹播放"><br><img src="https://gitee.com/thiswildidea/images/raw/master/smiapi/ts/4x/3d/%E8%BD%A8%E8%BF%B9%E6%92%AD%E6%94%BE/trajectory.gif" alt="三维轨迹播放"></p>
+<h3 id="二维轨迹播放"><a href="#二维轨迹播放" class="headerlink" title="二维轨迹播放"></a>二维轨迹播放</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> SMap <span class="keyword">from</span> <span class="string">'smap-shsmi'</span> <span class="comment">// 引用SMAP</span></span><br><span class="line"><span class="keyword">import</span> Plugins <span class="keyword">from</span> <span class="string">'smap-plugins-shsmi'</span> <span class="comment">// 引用Plugins</span></span><br><span class="line"> <span class="keyword">const</span> map = <span class="keyword">new</span> SMap.Map(<span class="string">'container'</span>, &#123;</span><br><span class="line">        viewMode: <span class="string">'2D'</span>,</span><br><span class="line">        center: [<span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line">        zoom: <span class="number">4</span>,</span><br><span class="line">        zooms: [<span class="number">0</span>, <span class="number">12</span>],</span><br><span class="line">        mapStyle: <span class="string">'smap://styles/dark'</span></span><br><span class="line">      &#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> routedata = [</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">358.5185</span>,</span><br><span class="line">    y: <span class="number">-77.2235</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">267.4522</span>,</span><br><span class="line">    y: <span class="number">99.1188</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">234.90484</span>,</span><br><span class="line">    y: <span class="number">212.834811</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">181.7233</span>,</span><br><span class="line">    y: <span class="number">381.1000</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">138.1169</span>,</span><br><span class="line">    y: <span class="number">527.79151</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">88.0071</span>,</span><br><span class="line">    y: <span class="number">647.4898</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">63.1774</span>,</span><br><span class="line">    y: <span class="number">692.2989</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">94.5310</span>,</span><br><span class="line">    y: <span class="number">706.0872</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">143.59157</span>,</span><br><span class="line">    y: <span class="number">595.3354</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">182.1127</span>,</span><br><span class="line">    y: <span class="number">481.7369</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">223.4553</span>,</span><br><span class="line">    y: <span class="number">323.6532</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">248.4933</span>,</span><br><span class="line">    y: <span class="number">203.5321</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">325.065</span>,</span><br><span class="line">    y: <span class="number">31.37497</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    x: <span class="number">546.1844</span>,</span><br><span class="line">    y: <span class="number">-355.09700</span></span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line"><span class="keyword">const</span> trajectory = <span class="keyword">new</span> Plugins.Trajectory(map.map)</span><br><span class="line">trajectory.playback(&#123;</span><br><span class="line">  coords: routedata,</span><br><span class="line">  showtrail: <span class="literal">true</span>,</span><br><span class="line">  trailsymbol: &#123;</span><br><span class="line">    type: <span class="string">'simple-line'</span>,</span><br><span class="line">    color: [<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.5</span>],</span><br><span class="line">    width: <span class="string">'10px'</span>,</span><br><span class="line">    style: <span class="string">'solid'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  mobilesymbol: &#123;</span><br><span class="line">    type: <span class="string">'picture-marker'</span>,</span><br><span class="line">    url: <span class="built_in">require</span>(<span class="string">'@/assets/car.png'</span>),</span><br><span class="line">    width: <span class="string">'64px'</span>,</span><br><span class="line">    height: <span class="string">'64px'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/thiswildidea/images/raw/master/smiapi/ts/4x/2d/%E8%BD%A8%E8%BF%B9%E6%92%AD%E6%94%BE/trajectoryplayback.png" alt="二维轨迹播放"><br><img src="https://gitee.com/thiswildidea/images/raw/master/smiapi/ts/4x/2d/%E8%BD%A8%E8%BF%B9%E6%92%AD%E6%94%BE/trajectoryplayback1.png" alt="二维轨迹播放"><br><img src="https://gitee.com/thiswildidea/images/raw/master/smiapi/ts/4x/2d/%E8%BD%A8%E8%BF%B9%E6%92%AD%E6%94%BE/trajectoryplayback.gif" alt="二维轨迹播放"></p>
+<h2 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">coords：轨迹坐标（上海坐标系统）</span><br><span class="line">showtrail: 是否显示轨迹</span><br><span class="line">trailsymbol： 轨迹符号   <span class="comment">//二三维模式下自行定义 参考以上示例</span></span><br><span class="line">mobilesymbol：移动符号 <span class="comment">//二三维模式下自行定义  参考以上示例</span></span><br></pre></td></tr></table></figure>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/smap-plugins-shsmi/">smap-plugins-shsmi</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/smap/">smap</a><a href="/tags/plugins/">plugins</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://thiswildidea.github.io/2020/07/16/trajectory-playback-in-smap-plugins-shsmi/" data-title="trajectory  playback  in  smap-plugins-shsmi | A blog about maps" data-tsina="5376033827" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2020/07/13/ArcGIS-Enterprise-install-for-linux-standalone/"  title="ArcGIS Enterprise install for linux standalone">
+ <strong>下一篇：</strong><br/> 
+ <span>ArcGIS Enterprise install for linux standalone
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github 名片</p>
+<div class="github-card" data-github="thiswildidea" data-theme="medium"></div>
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/ArcGIS-Enterprise/" title="ArcGIS-Enterprise">ArcGIS-Enterprise<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/smap-plugins-shsmi/" title="smap-plugins-shsmi">smap-plugins-shsmi<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/smap-shsmi/" title="smap-shsmi">smap-shsmi<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/soe/" title="soe">soe<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/token/" title="token">token<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/smap/" title="smap">smap<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/arcgis/" title="arcgis">arcgis<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/soe/" title="soe">soe<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/token/" title="token">token<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/install/" title="install">install<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/linux/" title="linux">linux<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/plugins/" title="plugins">plugins<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://developers.arcgis.com/" target="_blank" title="ArcGIS for Developers">ArcGIS for Developers</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=5376033827&verifier=fba80209&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m yangyiwen in shsmi. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/5376033827" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/thiswildidea" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		<!-- Powered by <a href="https://github.com/thiswildidea" target="_blank" title="hexo">thiswildidea</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020  -->
+		Powered by <a href="https://github.com/thiswildidea" target="_blank" title="hexo">thiswildidea</a>© 2020
+		
+		<a href="/about" target="_blank" title="yangyiwen">yangyiwen</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+ </html>
