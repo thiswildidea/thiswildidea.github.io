@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://gitee.com/thiswildidea/images/raw/master/others/Datatable.png">
 <meta property="og:image" content="https://gitee.com/thiswildidea/images/raw/master/others/Datatable.png">
 <meta property="article:published_time" content="2020-07-17T05:54:41.000Z">
-<meta property="article:modified_time" content="2020-07-31T04:09:10.598Z">
+<meta property="article:modified_time" content="2020-07-31T09:08:31.783Z">
 <meta property="article:author" content="yangyiwen">
 <meta property="article:tag" content="smap">
 <meta property="article:tag" content="arcgis">
@@ -206,7 +206,7 @@
 <h4 id="添加边界隐藏"><a href="#添加边界隐藏" class="headerlink" title="添加边界隐藏"></a>添加边界隐藏</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Boundary.hide()</span><br></pre></td></tr></table></figure>
 <h4 id="添加边界显示"><a href="#添加边界显示" class="headerlink" title="添加边界显示"></a>添加边界显示</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Boundary.show()</span><br></pre></td></tr></table></figure>
 <h3 id="边界参数说明"><a href="#边界参数说明" class="headerlink" title="边界参数说明"></a>边界参数说明</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">boundarytype: <span class="string">'qx_boundary'</span>,  <span class="comment">//边界类型 目前支持区县、街道和居委会</span></span><br><span class="line">boundaryDefinition: <span class="string">"name like '%黄浦%'"</span>, <span class="comment">// qxcode like '%01%     查询条件</span></span><br><span class="line">symbol: &#123;</span><br><span class="line">  type: <span class="string">'simple-fill'</span>,</span><br><span class="line">  color: [<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0</span>],</span><br><span class="line">  outline: &#123;</span><br><span class="line">    color: [<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">1</span>],</span><br><span class="line">    width: <span class="string">'5px'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;            <span class="comment">//边界符号样式</span></span><br></pre></td></tr></table></figure>
-<p><a href="https://gitee.com/thiswildidea/images/blob/master/resouces/boundary/qx_boundary.xlsx" target="_blank" rel="noopener"><img src="https://gitee.com/thiswildidea/images/raw/master/others/Datatable.png" alt="区县数据" title="区县数据"></a><br><a href="https://gitee.com/thiswildidea/images/blob/master/resouces/boundary/jwh_boundary.xlsx" target="_blank" rel="noopener"><img src="https://gitee.com/thiswildidea/images/raw/master/others/Datatable.png" alt="街道数据" title="街道数据"></a><br><a href="https://gitee.com/thiswildidea/images/blob/master/resouces/boundary/qx_boundary.xlsx" target="_blank" rel="noopener"><img src="https://gitee.com/thiswildidea/images/raw/master/others/Datatable.png" alt="居委会数据" title="居委会数据"></a></p>
+<p><a href="https://gitee.com/thiswildidea/images/blob/master/resouces/boundary/qx_boundary.xlsx" target="_blank" rel="noopener"><img src="https://gitee.com/thiswildidea/images/raw/master/others/Datatable.png" alt="区县属性数据" title="区县属性数据"></a><br><a href="https://gitee.com/thiswildidea/images/blob/master/resouces/boundary/jd_boundary.xlsx" target="_blank" rel="noopener"><img src="https://gitee.com/thiswildidea/images/raw/master/others/Datatable.png" alt="街道属性数据" title="街道属性数据"></a><br><a href="https://gitee.com/thiswildidea/images/blob/master/resouces/boundary/jwh_boundary.xlsx" target="_blank" rel="noopener"><img src="https://gitee.com/thiswildidea/images/raw/master/others/Datatable.png" alt="居委会属性数据" title="居委会属性数据"></a></p>
 <h3 id="区县街道居委会边界设置注意事项"><a href="#区县街道居委会边界设置注意事项" class="headerlink" title="区县街道居委会边界设置注意事项"></a>区县街道居委会边界设置注意事项</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Plugins.Boundary 类可多次实例化对象， 移除、隐藏、显示要分别对应相应实例化对象</span><br></pre></td></tr></table></figure>
   
 	</div>
@@ -243,6 +243,14 @@
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2020/07/31/smap-geotask-shsmi/" title="smap-geotask-shsmi">
+  <strong>上一篇：</strong><br/>
+  <span>
+  smap-geotask-shsmi</span>
+</a>
+</div>
+
 
 <div class="next">
 <a href="/2020/07/17/MigrationMap-in-smap-plugins-shsmi/"  title="MigrationMap  in  smap-plugins-shsmi">
@@ -284,6 +292,14 @@
 		  
 		
 		  
+			<li><a href="/categories/smap/" title="smap">smap<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/smap-geotask-shsmi/" title="smap-geotask-shsmi">smap-geotask-shsmi<sup>1</sup></a></li>
+		  
+		
+		  
 			<li><a href="/categories/smap-plugins-shsmi/" title="smap-plugins-shsmi">smap-plugins-shsmi<sup>3</sup></a></li>
 		  
 		
@@ -309,11 +325,11 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/smap/" title="smap">smap<sup>6</sup></a></li>
+				<li><a href="/tags/smap/" title="smap">smap<sup>7</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/arcgis/" title="arcgis">arcgis<sup>4</sup></a></li>
+				<li><a href="/tags/arcgis/" title="arcgis">arcgis<sup>6</sup></a></li>
 			
 		
 			
@@ -334,6 +350,10 @@
 		
 			
 				<li><a href="/tags/linux/" title="linux">linux<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/layerconfig/" title="layerconfig">layerconfig<sup>1</sup></a></li>
 			
 		
 		</ul>
