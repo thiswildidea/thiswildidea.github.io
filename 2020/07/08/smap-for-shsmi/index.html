@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://gitee.com/thiswildidea/images/raw/master/smiapi/ts/4x/3d/%E5%9C%B0%E5%9B%BE%E8%A6%86%E7%9B%96%E7%89%A9/massMarkers.png">
 <meta property="og:image" content="https://gitee.com/thiswildidea/images/raw/master/smiapi/ts/4x/3d/%E5%9C%B0%E5%9B%BE%E8%A6%86%E7%9B%96%E7%89%A9/massMarkersSelection.png">
 <meta property="article:published_time" content="2020-07-08T06:35:32.000Z">
-<meta property="article:modified_time" content="2020-07-24T01:53:18.313Z">
+<meta property="article:modified_time" content="2020-07-31T15:00:02.598Z">
 <meta property="article:author" content="yangyiwen">
 <meta property="article:tag" content="smap">
 <meta property="article:tag" content="arcgis">
@@ -370,7 +370,7 @@
 <h5 id="地图范围变化事件"><a href="#地图范围变化事件" class="headerlink" title="[地图范围变化事件]"></a>[地图范围变化事件]</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">map.on(SMap.MapEvent.extentchanged, <span class="function"><span class="keyword">function</span>(<span class="params">excenter</span>) </span>&#123;</span><br><span class="line">     </span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
 <h5 id="地图中心点变化事件"><a href="#地图中心点变化事件" class="headerlink" title="[地图中心点变化事件]"></a>[地图中心点变化事件]</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">map.on(SMap.MapEvent.centerchanged, <span class="function"><span class="keyword">function</span>(<span class="params">center</span>) </span>&#123;</span><br><span class="line">     </span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
 <h5 id="地图失去焦点事件"><a href="#地图失去焦点事件" class="headerlink" title="[地图失去焦点事件]"></a>[地图失去焦点事件]</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">map.on(SMap.MapEvent.blur, <span class="function"><span class="keyword">function</span>(<span class="params">view,eventParamter</span>) </span>&#123;</span><br><span class="line">     </span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
-<h5 id="地图单击事件"><a href="#地图单击事件" class="headerlink" title="[地图单击事件]"></a>[地图单击事件]</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">map.on(SMap.MapEvent.click, <span class="function"><span class="keyword">function</span>(<span class="params">view,eventParamter</span>) </span>&#123;</span><br><span class="line">      maview.hitTest(eventParamter).then(<span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line">          <span class="built_in">console</span>.log(response)</span><br><span class="line">        &#125;)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<h5 id="地图单击事件"><a href="#地图单击事件" class="headerlink" title="[地图单击事件]"></a>[地图单击事件]</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">map.on(SMap.MapEvent.click, <span class="function"><span class="keyword">function</span>(<span class="params">view,eventParamter</span>) </span>&#123;</span><br><span class="line">      view.hitTest(eventParamter).then(<span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line">          <span class="built_in">console</span>.log(response)</span><br><span class="line">        &#125;)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
 <h5 id="地图双击事件"><a href="#地图双击事件" class="headerlink" title="[地图双击事件]"></a>[地图双击事件]</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">map.on(SMap.MapEvent.doubleclick, <span class="function"><span class="keyword">function</span>(<span class="params">view,eventParamter</span>) </span>&#123;</span><br><span class="line">     </span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
 <h5 id="地图拖拽事件"><a href="#地图拖拽事件" class="headerlink" title="[地图拖拽事件]"></a>[地图拖拽事件]</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">map.on(SMap.MapEvent.drag, <span class="function"><span class="keyword">function</span>(<span class="params">view,eventParamter</span>) </span>&#123;</span><br><span class="line">     </span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
 <h5 id="地图聚焦事件"><a href="#地图聚焦事件" class="headerlink" title="[地图聚焦事件]"></a>[地图聚焦事件]</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">map.on(SMap.MapEvent.focus, <span class="function"><span class="keyword">function</span>(<span class="params">view,eventParamter</span>) </span>&#123;</span><br><span class="line">     </span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
@@ -471,7 +471,7 @@
 		  
 		
 		  
-			<li><a href="/categories/smap-plugins-shsmi/" title="smap-plugins-shsmi">smap-plugins-shsmi<sup>3</sup></a></li>
+			<li><a href="/categories/smap-plugins-shsmi/" title="smap-plugins-shsmi">smap-plugins-shsmi<sup>4</sup></a></li>
 		  
 		
 		  
@@ -496,7 +496,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/smap/" title="smap">smap<sup>7</sup></a></li>
+				<li><a href="/tags/smap/" title="smap">smap<sup>8</sup></a></li>
 			
 		
 			
@@ -504,7 +504,7 @@
 			
 		
 			
-				<li><a href="/tags/plugins/" title="plugins">plugins<sup>2</sup></a></li>
+				<li><a href="/tags/plugins/" title="plugins">plugins<sup>3</sup></a></li>
 			
 		
 			
