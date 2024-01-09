@@ -1,0 +1,316 @@
+{
+    "msg": "操作成功",
+    "code": 200,
+    "menus": [
+        {
+            "name": "/system",
+            "path": "/system",
+            "component": "Layout",
+            "redirect": "/system/user",
+            "alwaysShow": true,
+            "meta": {
+                "title": "系统设置",
+                "isHide": false,
+                "icon": "elementSetting",
+                "isKeepAlive": true,
+                "isLink": "",
+                "isIframe": false,
+                "isAffix": false,
+                "auth": ["system:manager:view"]
+            },
+            "children": [
+                {
+                    "name": "/system/user",
+                    "path": "/system/user",
+                    "component": "/system/user/index",
+                    "meta": {
+                        "title": "用户管理",
+                        "isHide": false,
+                        "icon": "elementUser",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "system:user:list"
+                        ]
+                    }
+                },
+                {
+                    "name": "/system/role",
+                    "path": "/system/role",
+                    "component": "/system/role/index",
+                    "meta": {
+                        "title": "角色管理",
+                        "isHide": false,
+                        "icon": "elementUserFilled",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "system:role:list"
+                        ]
+                    }
+                },
+                {
+                    "name": "/system/menu",
+                    "path": "/system/menu",
+                    "component": "/system/menu/index",
+                    "meta": {
+                        "title": "菜单管理",
+                        "isHide": false,
+                        "icon": "iconfont icon-juxingkaobei",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "system:menu:list"
+                        ]
+                    }
+                },
+                {
+                    "name": "/system/dept",
+                    "path": "/system/dept",
+                    "component": "/system/dept/index",
+                    "meta": {
+                        "title": "部门管理",
+                        "isHide": false,
+                        "icon": "iconfont icon-jiliandongxuanzeqi",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "system:dept:list"
+                        ]
+                    }
+                },
+                {
+                    "name": "/system/post",
+                    "path": "/system/post",
+                    "component": "/system/post/index",
+                    "meta": {
+                        "title": "岗位管理",
+                        "isHide": false,
+                        "icon": "iconfont icon-neiqianshujuchucun",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "system:post:list"
+                        ]
+                    }
+                },
+                {
+                    "name": "/system/notice",
+                    "path": "/system/notice",
+                    "component": "/system/notice/index",
+                    "meta": {
+                        "title": "公告通知",
+                        "isHide": false,
+                        "icon": "elementTicket",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "system:notice:list"
+                        ]
+                    }
+                },
+                {
+                    "name": "/system/dict",
+                    "path": "/system/dict",
+                    "component": "/system/dict/index",
+                    "meta": {
+                        "title": "字典管理",
+                        "isHide": false,
+                        "icon": "elementCellphone",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "system:dictT:list"
+                        ]
+                    }
+                },
+                {
+                    "name": "/system/config",
+                    "path": "/system/config",
+                    "component": "/system/config/index",
+                    "meta": {
+                        "title": "参数管理",
+                        "isHide": false,
+                        "icon": "elementDocumentCopy",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "system:config:list"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "/log",
+            "path": "/log",
+            "component": "Layout",
+            "alwaysShow": true,
+            "meta": {
+                "title": "日志系统",
+                "isHide": false,
+                "icon": "iconfont icon-biaodan",
+                "isKeepAlive": false,
+                "isLink": "",
+                "isIframe": false,
+                "isAffix": false,
+                "auth": []
+            },
+            "children": [
+                {
+                    "name": "/log/job",
+                    "path": "/log/job",
+                    "component": "/log/job/index",
+                    "meta": {
+                        "title": "任务日志",
+                        "isHide": false,
+                        "icon": "iconfont icon--chaifenhang",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "log:job:list"
+                        ]
+                    }
+                },
+                {
+                    "name": "/log/oper",
+                    "path": "/log/oper",
+                    "component": "/log/oper/index",
+                    "meta": {
+                        "title": "操作日志",
+                        "isHide": false,
+                        "icon": "iconfont icon-bolangnengshiyanchang",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "log:oper:list"
+                        ]
+                    }
+                },
+                {
+                    "name": "/log/login",
+                    "path": "/log/login",
+                    "component": "/log/login/index",
+                    "meta": {
+                        "title": "登录日志",
+                        "isHide": false,
+                        "icon": "iconfont icon--chaifenlie",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "log:login:list"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "/monitor",
+            "path": "/monitor",
+            "component": "Layout",
+            "alwaysShow": true,
+            "meta": {
+                "title": "系统监控",
+                "isHide": false,
+                "icon": "iconfont icon-gongju",
+                "isKeepAlive": false,
+                "isLink": "",
+                "isIframe": false,
+                "isAffix": false,
+                "auth": []
+            },
+            "children": [
+                {
+                    "name": "/monitor/job",
+                    "path": "/monitor/job",
+                    "component": "/monitor/job/index",
+                    "meta": {
+                        "title": "定时任务",
+                        "isHide": false,
+                        "icon": "iconfont icon-diannao-shuju",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "monitor:job:list"
+                        ]
+                    }
+                },
+                {
+                    "name": "monitor/online",
+                    "path": "monitor/online",
+                    "component": "monitor/online/index",
+                    "meta": {
+                        "title": "在线用户",
+                        "isHide": false,
+                        "icon": "iconfont icon-diannao101",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "monitor:online:list"
+                        ]
+                    }
+                },
+                {
+                    "name": "monitor/server",
+                    "path": "monitor/server",
+                    "component": "monitor/server/index",
+                    "meta": {
+                        "title": "服务监控",
+                        "isHide": false,
+                        "icon": "iconfont icon-diannao-shuju",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "monitor:server:list"
+                        ]
+                    }
+                },
+                {
+                    "name": "monitor/cache/",
+                    "path": "monitor/cache/",
+                    "component": "monitor/cache/index",
+                    "meta": {
+                        "title": "缓存监控",
+                        "isHide": false,
+                        "icon": "iconfont icon-jiliandongxuanzeqi",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "monitor:cache:list"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
