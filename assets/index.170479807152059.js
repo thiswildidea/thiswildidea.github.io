@@ -1,1 +1,0 @@
-import{_ as e,a as n,o}from"./index.1704798071520.js";const s={name:"Message"};function t(a,c,r,_,p,d){return o(),n("div",null,"\u5F00\u53D1\u4E2D\u3002\u3002\u3002")}const i=e(s,[["render",t]]);export{i as default};
