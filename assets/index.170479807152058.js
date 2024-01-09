@@ -1,0 +1,1 @@
+import{_ as e,a as n,o}from"./index.1704798071520.js";const t={name:"Mail"};function a(c,r,s,_,p,i){return o(),n("div",null,"\u5F00\u53D1\u4E2D\u3002\u3002\u3002")}const d=e(t,[["render",a]]);export{d as default};
