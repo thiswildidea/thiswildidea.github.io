@@ -314,27 +314,27 @@
             ]
         },
         {
-            "name": "/visual",
-            "path": "/visual",
+            "name": "/visualization",
+            "path": "/visualization",
             "component": "Layout",
-            "redirect": "/visual/menucenter",
+            "redirect": "/visualization/menucenter",
             "alwaysShow": true,
             "meta": {
-                "title": "message.router.gis.visual.menutitle",
+                "title": "message.router.gis.visualization.menutitle",
                 "isHide": false,
-                "icon": "esri-icon-visual",
+                "icon": "esri-icon-visualization",
                 "isKeepAlive": true,
                 "isLink": "",
                 "isIframe": false,
                 "isAffix": false,
-                "auth": ["gis:visual:view"]
+                "auth": ["gis:visualization:view"]
             },
             "children": [{
-                    "name": "/visual/menucenter",
-                    "path": "/visual/menucenter",
-                    "component": "/gis/visual/menucenter/index",
+                    "name": "/visualization/menucenter",
+                    "path": "/visualization/menucenter",
+                    "component": "/gis/visualization/menucenter/index",
                     "meta": {
-                        "title": "message.router.gis.visual.menucenter",
+                        "title": "message.router.gis.visualization.menucenter",
                         "isHide": true,
                         "icon": "elementUser",
                         "isKeepAlive": false,
@@ -342,16 +342,16 @@
                         "isIframe": false,
                         "isAffix": false,
                         "auth": [
-                            "gis:visual-menucenter:view"
+                            "gis:visualization-menucenter:view"
                         ]
                     }
                 },
                 {
-                    "name": "/visual/building",
-                    "path": "/visual/building",
-                    "component": "/gis/visual/building/index",
+                    "name": "/visualization/building",
+                    "path": "/visualization/building",
+                    "component": "/gis/visualization/building/index",
                     "meta": {
-                        "title": "message.router.gis.visual.building",
+                        "title": "message.router.gis.visualization.building",
                         "isHide": false,
                         "icon": "elementUser",
                         "isKeepAlive": false,
@@ -359,7 +359,7 @@
                         "isIframe": false,
                         "isAffix": false,
                         "auth": [
-                            "gis:visual-building:view"
+                            "gis:visualization-building:view"
                         ]
                     }
                 }
