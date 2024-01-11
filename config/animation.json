@@ -1,0 +1,9 @@
+{
+        "cameraoptions": {
+        "speedFactor": 0.1,
+        "duration": 8000,
+        "maxDuration": 8000,
+        "easing": "in-expo" 
+         //linear, in-cubic, out-cubic, in-out-cubic, in-expo, out-expo, in-out-expo, in-out-coast-quadratic
+    }
+}

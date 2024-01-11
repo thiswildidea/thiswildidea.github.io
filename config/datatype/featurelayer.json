@@ -1,0 +1,10 @@
+{
+    "featurelayerurl": "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Landscape_Trees/FeatureServer/0",
+    "cameraoptions": {
+        "speedFactor": 0.1,
+        "duration": 4000,
+        "maxDuration": 4000,
+        "easing": "in-expo" 
+         
+    }
+}
