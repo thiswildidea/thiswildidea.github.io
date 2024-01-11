@@ -76,7 +76,7 @@
                     "meta": {
                         "title": "message.router.gis.basemap.menucenter",
                         "isHide": true,
-                        "icon": "elementUser",
+                        "icon": "esri-icon-basemap",
                         "isKeepAlive": false,
                         "isLink": "",
                         "isIframe": false,
@@ -93,13 +93,267 @@
                     "meta": {
                         "title": "message.router.gis.basemap.satellite",
                         "isHide": false,
-                        "icon": "elementUser",
+                        "icon": "esri-icon-mapbase",
                         "isKeepAlive": false,
                         "isLink": "",
                         "isIframe": false,
                         "isAffix": false,
                         "auth": [
                             "gis:basemap-satellite:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/basemap/hybrid",
+                    "path": "/basemap/hybrid",
+                    "component": "/gis/basemap/hybrid/index",
+                    "meta": {
+                        "title": "message.router.gis.basemap.hybrid",
+                        "isHide": false,
+                        "icon": "esri-icon-mapbase",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:basemap-hybrid:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/basemap/topo",
+                    "path": "/basemap/topo",
+                    "component": "/gis/basemap/topo/index",
+                    "meta": {
+                        "title": "message.router.gis.basemap.topo",
+                        "isHide": false,
+                        "icon": "esri-icon-mapbase",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:basemap-topo:view"
+                        ]
+                    }
+                }, {
+                    "name": "/basemap/topovector",
+                    "path": "/basemap/topovector",
+                    "component": "/gis/basemap/topovector/index",
+                    "meta": {
+                        "title": "message.router.gis.basemap.topovector",
+                        "isHide": false,
+                        "icon": "esri-icon-mapbase",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:basemap-topovector:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/basemap/streets",
+                    "path": "/basemap/streets",
+                    "component": "/gis/basemap/streets/index",
+                    "meta": {
+                        "title": "message.router.gis.basemap.streets",
+                        "isHide": false,
+                        "icon": "esri-icon-mapbase",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:basemap-streets:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/basemap/streetsvector",
+                    "path": "/basemap/streetsvector",
+                    "component": "/gis/basemap/streetsvector/index",
+                    "meta": {
+                        "title": "message.router.gis.basemap.streetsvector",
+                        "isHide": false,
+                        "icon": "esri-icon-mapbase",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:basemap-streetsvector:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/basemap/streetsnightvector",
+                    "path": "/basemap/streetsnightvector",
+                    "component": "/gis/basemap/streetsnightvector/index",
+                    "meta": {
+                        "title": "message.router.gis.basemap.streetsnightvector",
+                        "isHide": false,
+                        "icon": "esri-icon-mapbase",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:basemap-streetsnightvector:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/basemap/streetsnavigationvector",
+                    "path": "/basemap/streetsnavigationvector",
+                    "component": "/gis/basemap/streetsnavigationvector/index",
+                    "meta": {
+                        "title": "message.router.gis.basemap.streetsnavigationvector",
+                        "isHide": false,
+                        "icon": "esri-icon-mapbase",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:basemap-streetsnavigationvector:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/basemap/streetsreliefvector",
+                    "path": "/basemap/streetsreliefvector",
+                    "component": "/gis/basemap/streetsreliefvector/index",
+                    "meta": {
+                        "title": "message.router.gis.basemap.streetsreliefvector",
+                        "isHide": false,
+                        "icon": "esri-icon-mapbase",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:basemap-streetsreliefvector:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/basemap/osm",
+                    "path": "/basemap/osm",
+                    "component": "/gis/basemap/osm/index",
+                    "meta": {
+                        "title": "message.router.gis.basemap.osm",
+                        "isHide": false,
+                        "icon": "esri-icon-mapbase",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:basemap-osm:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/basemap/terrain",
+                    "path": "/basemap/terrain",
+                    "component": "/gis/basemap/terrain/index",
+                    "meta": {
+                        "title": "message.router.gis.basemap.terrain",
+                        "isHide": false,
+                        "icon": "esri-icon-mapbase",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:basemap-terrain:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/basemap/gray",
+                    "path": "/basemap/gray",
+                    "component": "/gis/basemap/gray/index",
+                    "meta": {
+                        "title": "message.router.gis.basemap.gray",
+                        "isHide": false,
+                        "icon": "esri-icon-mapbase",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:basemap-gray:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/basemap/darkgray",
+                    "path": "/basemap/darkgray",
+                    "component": "/gis/basemap/darkgray/index",
+                    "meta": {
+                        "title": "message.router.gis.basemap.darkgray",
+                        "isHide": false,
+                        "icon": "esri-icon-mapbase",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:basemap-darkgray:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/basemap/grayvector",
+                    "path": "/basemap/grayvector",
+                    "component": "/gis/basemap/grayvector/index",
+                    "meta": {
+                        "title": "message.router.gis.basemap.grayvector",
+                        "isHide": false,
+                        "icon": "esri-icon-mapbase",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:basemap-grayvector:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/basemap/darkgrayvector",
+                    "path": "/basemap/darkgrayvector",
+                    "component": "/gis/basemap/darkgrayvector/index",
+                    "meta": {
+                        "title": "message.router.gis.basemap.darkgrayvector",
+                        "isHide": false,
+                        "icon": "esri-icon-mapbase",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:basemap-darkgrayvector:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/basemap/oceans",
+                    "path": "/basemap/oceans",
+                    "component": "/gis/basemap/oceans/index",
+                    "meta": {
+                        "title": "message.router.gis.basemap.oceans",
+                        "isHide": false,
+                        "icon": "esri-icon-mapbase",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:basemap-oceansoceans:view"
                         ]
                     }
                 }
@@ -128,7 +382,7 @@
                     "meta": {
                         "title": "message.router.gis.datatype.menucenter",
                         "isHide": true,
-                        "icon": "elementUser",
+                        "icon": "esri-icon-mapbase",
                         "isKeepAlive": false,
                         "isLink": "",
                         "isIframe": false,
