@@ -87,11 +87,11 @@
                     }
                 },
                 {
-                    "name": "/basemap/image",
-                    "path": "/basemap/image",
-                    "component": "/gis/basemap/image/index",
+                    "name": "/basemap/satellite",
+                    "path": "/basemap/satellite",
+                    "component": "/gis/basemap/satellite/index",
                     "meta": {
-                        "title": "message.router.gis.basemap.image",
+                        "title": "message.router.gis.basemap.satellite",
                         "isHide": false,
                         "icon": "elementUser",
                         "isKeepAlive": false,
@@ -99,7 +99,7 @@
                         "isIframe": false,
                         "isAffix": false,
                         "auth": [
-                            "gis:basemap-image:view"
+                            "gis:basemap-satellite:view"
                         ]
                     }
                 }
