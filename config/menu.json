@@ -444,6 +444,110 @@
                     }
                 }
             ]
+        },  
+        {
+            "name": "/widgets",
+            "path": "/widgets",
+            "component": "Layout",
+            "redirect": "/widgets/menucenter",
+            "alwaysShow": true,
+            "meta": {
+                "title": "message.router.gis.widgets.menutitle",
+                "isHide": false,
+                "icon": "esri-icon-widgets",
+                "isKeepAlive": true,
+                "isLink": "",
+                "isIframe": false,
+                "isAffix": false,
+                "auth": ["gis:widgets:view"]
+            },
+            "children": [{
+                    "name": "/widgets/menucenter",
+                    "path": "/widgets/menucenter",
+                    "component": "/gis/widgets/menucenter/index",
+                    "meta": {
+                        "title": "message.router.gis.widgets.menucenter",
+                        "isHide": true,
+                        "icon": "esri-icon-widgets",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:widgets-menucenter:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/widgets/layerlist",
+                    "path": "/widgets/layerlist",
+                    "component": "/gis/widgets/layerlist/index",
+                    "meta": {
+                        "title": "message.router.gis.widgets.layerlist",
+                        "isHide": false,
+                        "icon": "esri-icon-layer",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:widgets-layerlist:view"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "/visualization",
+            "path": "/visualization",
+            "component": "Layout",
+            "redirect": "/visualization/menucenter",
+            "alwaysShow": true,
+            "meta": {
+                "title": "message.router.gis.visualization.menutitle",
+                "isHide": false,
+                "icon": "esri-icon-visualization",
+                "isKeepAlive": true,
+                "isLink": "",
+                "isIframe": false,
+                "isAffix": false,
+                "auth": ["gis:visualization:view"]
+            },
+            "children": [{
+                    "name": "/visualization/menucenter",
+                    "path": "/visualization/menucenter",
+                    "component": "/gis/visualization/menucenter/index",
+                    "meta": {
+                        "title": "message.router.gis.visualization.menucenter",
+                        "isHide": true,
+                        "icon": "elementUser",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:visualization-menucenter:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/visualization/rippleWall",
+                    "path": "/visualization/rippleWall",
+                    "component": "/gis/visualization/rippleWall/index",
+                    "meta": {
+                        "title": "message.router.gis.visualization.rippleWall",
+                        "isHide": false,
+                        "icon": "elementUser",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:visualization-rippleWall:view"
+                        ]
+                    }
+                }
+            ]
         },
         {
             "name": "/query",
@@ -596,58 +700,6 @@
                         "isAffix": false,
                         "auth": [
                             "gis:edit-feature:view"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "name": "/visualization",
-            "path": "/visualization",
-            "component": "Layout",
-            "redirect": "/visualization/menucenter",
-            "alwaysShow": true,
-            "meta": {
-                "title": "message.router.gis.visualization.menutitle",
-                "isHide": false,
-                "icon": "esri-icon-visualization",
-                "isKeepAlive": true,
-                "isLink": "",
-                "isIframe": false,
-                "isAffix": false,
-                "auth": ["gis:visualization:view"]
-            },
-            "children": [{
-                    "name": "/visualization/menucenter",
-                    "path": "/visualization/menucenter",
-                    "component": "/gis/visualization/menucenter/index",
-                    "meta": {
-                        "title": "message.router.gis.visualization.menucenter",
-                        "isHide": true,
-                        "icon": "elementUser",
-                        "isKeepAlive": false,
-                        "isLink": "",
-                        "isIframe": false,
-                        "isAffix": false,
-                        "auth": [
-                            "gis:visualization-menucenter:view"
-                        ]
-                    }
-                },
-                {
-                    "name": "/visualization/building",
-                    "path": "/visualization/building",
-                    "component": "/gis/visualization/building/index",
-                    "meta": {
-                        "title": "message.router.gis.visualization.building",
-                        "isHide": false,
-                        "icon": "elementUser",
-                        "isKeepAlive": false,
-                        "isLink": "",
-                        "isIframe": false,
-                        "isAffix": false,
-                        "auth": [
-                            "gis:visualization-building:view"
                         ]
                     }
                 }
