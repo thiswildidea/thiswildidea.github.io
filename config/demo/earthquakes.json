@@ -1,0 +1,96 @@
+{
+    "geojsonLayer": {
+        "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson",
+        "template": {
+            "title": "Earthquake Info",
+            "content": "Magnitude {mag} {type} hit {place} on {time}",
+            "fieldInfos": [{
+                "fieldName": "time",
+                "format": {
+                    "dateFormat": "short-date-short-time"
+                }
+            }]
+        },
+        "labelingInfo": [{
+            "labelExpressionInfo": {
+                "value": "{mag}"
+            },
+            "symbol": {
+                "type": "label-3d",
+                "symbolLayers": [{
+                    "type": "text",
+                    "material": {
+                        "color": "green"
+                    },
+                    "halo": {
+                        "size": 1,
+                        "color": "orange"
+                    },
+                    "font": {
+                        "family": "Ubuntu Mono",
+                        "size": 18,
+                        "weight": "bold"
+                    },
+                    "size": 18
+                }],
+                "verticalOffset": {
+                    "screenLength": 250,
+                    "maxWorldLength": 600,
+                    "minWorldLength": 150
+                },
+                "callout": {
+                    "type": "line",
+                    "color": [50, 50, 50],
+                    "size": 2,
+                    "border": {
+                        "color": [50, 50, 50]
+                    }
+                }
+            },
+            "labelPlacement": "above-center",
+            "maxScale": 0,
+            "minScale": 0
+        }],
+        "renderer": {
+            "type": "simple",
+            "field": "mag",
+            "symbol": {
+                "type": "simple-marker",
+                "color": "red",
+                "outline": {
+                    "color": "white"
+                }
+            },
+            "visualVariables": [{
+                "type": "size",
+                "field": "mag",
+                "stops": [{
+                        "value": 2.5,
+                        "size": "4px"
+                    },
+                    {
+                        "value": 8,
+                        "size": "40px"
+                    }
+                ]
+            }]
+        }
+    },
+    "camera": {
+        "fov": 55,
+        "heading": 1.9786245163374916,
+        "position": {
+            "x": -9177537.693360077,
+            "y": 4241073.816291215,
+            "z": 1548.0319849457592
+        },
+        "tilt": 72.95717654055154
+    },
+    "cameraoptions": {
+        "speedFactor": 0.1,
+        "duration": 4000,
+        "maxDuration": 4000,
+        "easing": "in-expo"
+
+    }
+}

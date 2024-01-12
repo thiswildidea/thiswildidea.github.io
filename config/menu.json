@@ -35,6 +35,23 @@
                     }
                 },
                 {
+                    "name": "/demo/earthquakes",
+                    "path": "/demo/earthquakes",
+                    "component": "/gis/demo/earthquakes/index",
+                    "meta": {
+                        "title": "message.router.gis.demo.earthquakes",
+                        "isHide": false,
+                        "icon": "esri-icon-earthquake",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:demo-earthquakes:view"
+                        ]
+                    }
+                },
+                {
                     "name": "/demo/skyline",
                     "path": "/demo/skyline",
                     "component": "/gis/demo/skyline/index",
