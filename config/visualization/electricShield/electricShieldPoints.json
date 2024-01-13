@@ -1,0 +1,304 @@
+[
+    {
+    "points": [{
+        "name": "上海",
+        "x": 13520199.85,
+        "y": 3654099.00,
+        "radius": 800000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#FF0000",
+        "wireframe": false,
+        "speed": 0.01
+    }
+},  {
+    "points": [{
+        "name": "南京",
+        "x": 13216808.394998457,
+        "y": 3768616.60388936,
+        "radius": 100000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#6A5ACD",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [{
+        "name": "武汉",
+        "x": 12724431.652889634,
+        "y": 3582696.896611916,
+        "radius": 100000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#4B0082",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [{
+        "name": "南昌",
+        "x": 12897295.921645489,
+        "y": 3333887.1087033753,
+        "radius": 200000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#008080",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [{
+        "name": "台湾",
+        "x": 13430940.33820788,
+        "y": 2773141.404560086,
+        "radius": 200000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#000080",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [{
+        "name": "北京",
+        "x": 12955187.221940473,
+        "y": 4852428.17029543,
+        "radius": 800000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#5F9EA0",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [{
+        "name": "香港",
+        "x": 12707363.179488966,
+        "y": 2545089.6271955,
+        "radius": 200000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#708090",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [{
+        "name": "南宁",
+        "x": 12059835.053878117,
+        "y": 2606367.4465865735,
+        "radius": 200000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#F08080",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [{
+        "name": "西安",
+        "x": 12123559.095104845,
+        "y": 4068092.2906468147,
+        "radius": 600000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#FFA07A",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [ {
+        "name": "乌鲁木齐",
+        "x": 9751798.121855022,
+        "y": 5432869.410435887,
+        "radius": 400000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#EE82EE",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [{
+        "name": "西藏",
+        "x": 10144809.205741404,
+        "y": 3460079.1150626373,
+        "radius": 1000000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#FF00FF",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [{
+        "name": "成都",
+        "x": 11584533.587814312,
+        "y": 3589306.4175440916,
+        "radius": 400000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#00FF00",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [ {
+        "name": "哈尔滨",
+        "x": 14096681.956144705,
+        "y": 5740811.855901429,
+        "radius": 200000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#FF3333",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [{
+        "name": "首尔",
+        "x": 14137600.21422361,
+        "y": 4517227.921931202,
+        "radius": 200000,
+        "altitude": 0
+    }, {
+        "name": "曼谷",
+        "x": 11190117.039751552,
+        "y": 1544524.6388734211,
+        "radius": 200000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#9370DB",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [{
+        "name": "东京",
+        "x": 15559324.335857159,
+        "y": 4254504.916315092,
+        "radius": 600000,
+        "altitude": 0
+    }, {
+        "name": "马尼拉",
+        "x": 13446583.829754766,
+        "y": 1631012.2113548398,
+        "radius": 400000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#FF8C00",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [{
+        "name": "莫斯科",
+        "x": 4181817.917350828,
+        "y": 7511961.1467359,
+        "radius": 800000,
+        "altitude": 0
+    }, {
+        "name": "纽约",
+        "x": -8238543.930121387,
+        "y": 4970438.245123614,
+        "radius": 800000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#FFFACD",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [{
+        "name": "悉尼",
+        "x": 16832312.416529562,
+        "y": -4011230.8889986086,
+        "radius": 800000,
+        "altitude": 0
+    }, {
+        "name": "开普敦",
+        "x": 2051891.4477303796,
+        "y": -4014118.2302773404,
+        "radius": 800000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#8FBC8F",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [{
+        "name": "巴西利亚",
+        "x":  -5345287.969223354,
+        "y": -1765712.12505239,
+        "radius": 800000,
+        "altitude": 0
+    }, {
+        "name": "巴黎",
+        "x": 260550.8450381019,
+        "y": 6250694.660288379,
+        "radius": 800000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#808000",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [{
+        "name": "开罗",
+        "x": 3479046.2517843507,
+        "y": 3515438.6427486967,
+        "radius": 800000,
+        "altitude": 0
+    }, {
+        "name": "华沙",
+        "x": 2340922.033705527,
+        "y": 6843966.218438841,
+        "radius": 800000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#00FF7F",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}, {
+    "points": [{
+        "name": "塔什干",
+        "x": 7715090.264789268,
+        "y": 5059928.373622682,
+        "radius": 800000,
+        "altitude": 0
+    }, {
+        "name": "马德里",
+        "x": -412809.6075733033,
+        "y": 4927061.847816123,
+        "radius": 800000,
+        "altitude": 0
+    }],
+    "options": {
+        "color": "#0000CC",
+        "wireframe": false,
+        "speed": 0.01
+    }
+}]

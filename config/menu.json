@@ -537,13 +537,30 @@
                     "meta": {
                         "title": "message.router.gis.visualization.rippleWall",
                         "isHide": false,
-                        "icon": "elementUser",
+                        "icon": "esri-icon-building",
                         "isKeepAlive": false,
                         "isLink": "",
                         "isIframe": false,
                         "isAffix": false,
                         "auth": [
                             "gis:visualization-rippleWall:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/visualization/electricShield",
+                    "path": "/visualization/electricShield",
+                    "component": "/gis/visualization/electricShield/index",
+                    "meta": {
+                        "title": "message.router.gis.visualization.electricShield",
+                        "isHide": false,
+                        "icon": "esri-icon-sphere",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:visualization-electricShield:view"
                         ]
                     }
                 }
