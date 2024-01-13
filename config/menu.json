@@ -563,6 +563,23 @@
                             "gis:visualization-electricShield:view"
                         ]
                     }
+                },
+                {
+                    "name": "/visualization/fashPoint",
+                    "path": "/visualization/fashPoint",
+                    "component": "/gis/visualization/fashPoint/index",
+                    "meta": {
+                        "title": "message.router.gis.visualization.fashPoint",
+                        "isHide": false,
+                        "icon": "esri-icon-sphere",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:visualization-fashPoint:view"
+                        ]
+                    }
                 }
             ]
         },
