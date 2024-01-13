@@ -71,6 +71,92 @@
             ]
         },
         {
+            "name": "/visualization",
+            "path": "/visualization",
+            "component": "Layout",
+            "redirect": "/visualization/menucenter",
+            "alwaysShow": true,
+            "meta": {
+                "title": "message.router.gis.visualization.menutitle",
+                "isHide": false,
+                "icon": "esri-icon-visualization",
+                "isKeepAlive": true,
+                "isLink": "",
+                "isIframe": false,
+                "isAffix": false,
+                "auth": ["gis:visualization:view"]
+            },
+            "children": [{
+                    "name": "/visualization/menucenter",
+                    "path": "/visualization/menucenter",
+                    "component": "/gis/visualization/menucenter/index",
+                    "meta": {
+                        "title": "message.router.gis.visualization.menucenter",
+                        "isHide": true,
+                        "icon": "elementUser",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:visualization-menucenter:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/visualization/rippleWall",
+                    "path": "/visualization/rippleWall",
+                    "component": "/gis/visualization/rippleWall/index",
+                    "meta": {
+                        "title": "message.router.gis.visualization.rippleWall",
+                        "isHide": false,
+                        "icon": "esri-icon-building",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:visualization-rippleWall:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/visualization/electricShield",
+                    "path": "/visualization/electricShield",
+                    "component": "/gis/visualization/electricShield/index",
+                    "meta": {
+                        "title": "message.router.gis.visualization.electricShield",
+                        "isHide": false,
+                        "icon": "esri-icon-sphere",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:visualization-electricShield:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/visualization/fashPoint",
+                    "path": "/visualization/fashPoint",
+                    "component": "/gis/visualization/fashPoint/index",
+                    "meta": {
+                        "title": "message.router.gis.visualization.fashPoint",
+                        "isHide": false,
+                        "icon": "esri-icon-sphere",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:visualization-fashPoint:view"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
             "name": "/basemap",
             "path": "/basemap",
             "component": "Layout",
@@ -492,92 +578,6 @@
                         "isAffix": false,
                         "auth": [
                             "gis:widgets-layerlist:view"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "name": "/visualization",
-            "path": "/visualization",
-            "component": "Layout",
-            "redirect": "/visualization/menucenter",
-            "alwaysShow": true,
-            "meta": {
-                "title": "message.router.gis.visualization.menutitle",
-                "isHide": false,
-                "icon": "esri-icon-visualization",
-                "isKeepAlive": true,
-                "isLink": "",
-                "isIframe": false,
-                "isAffix": false,
-                "auth": ["gis:visualization:view"]
-            },
-            "children": [{
-                    "name": "/visualization/menucenter",
-                    "path": "/visualization/menucenter",
-                    "component": "/gis/visualization/menucenter/index",
-                    "meta": {
-                        "title": "message.router.gis.visualization.menucenter",
-                        "isHide": true,
-                        "icon": "elementUser",
-                        "isKeepAlive": false,
-                        "isLink": "",
-                        "isIframe": false,
-                        "isAffix": false,
-                        "auth": [
-                            "gis:visualization-menucenter:view"
-                        ]
-                    }
-                },
-                {
-                    "name": "/visualization/rippleWall",
-                    "path": "/visualization/rippleWall",
-                    "component": "/gis/visualization/rippleWall/index",
-                    "meta": {
-                        "title": "message.router.gis.visualization.rippleWall",
-                        "isHide": false,
-                        "icon": "esri-icon-building",
-                        "isKeepAlive": false,
-                        "isLink": "",
-                        "isIframe": false,
-                        "isAffix": false,
-                        "auth": [
-                            "gis:visualization-rippleWall:view"
-                        ]
-                    }
-                },
-                {
-                    "name": "/visualization/electricShield",
-                    "path": "/visualization/electricShield",
-                    "component": "/gis/visualization/electricShield/index",
-                    "meta": {
-                        "title": "message.router.gis.visualization.electricShield",
-                        "isHide": false,
-                        "icon": "esri-icon-sphere",
-                        "isKeepAlive": false,
-                        "isLink": "",
-                        "isIframe": false,
-                        "isAffix": false,
-                        "auth": [
-                            "gis:visualization-electricShield:view"
-                        ]
-                    }
-                },
-                {
-                    "name": "/visualization/fashPoint",
-                    "path": "/visualization/fashPoint",
-                    "component": "/gis/visualization/fashPoint/index",
-                    "meta": {
-                        "title": "message.router.gis.visualization.fashPoint",
-                        "isHide": false,
-                        "icon": "esri-icon-sphere",
-                        "isKeepAlive": false,
-                        "isLink": "",
-                        "isIframe": false,
-                        "isAffix": false,
-                        "auth": [
-                            "gis:visualization-fashPoint:view"
                         ]
                     }
                 }
