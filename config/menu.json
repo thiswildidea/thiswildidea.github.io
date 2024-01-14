@@ -138,11 +138,11 @@
                     }
                 },
                 {
-                    "name": "/visualization/fashPoint",
-                    "path": "/visualization/fashPoint",
-                    "component": "/gis/visualization/fashPoint/index",
+                    "name": "/visualization/flashPoint",
+                    "path": "/visualization/flashPoint",
+                    "component": "/gis/visualization/flashPoint/index",
                     "meta": {
-                        "title": "message.router.gis.visualization.fashPoint",
+                        "title": "message.router.gis.visualization.flashPoint",
                         "isHide": false,
                         "icon": "esri-icon-sphere",
                         "isKeepAlive": false,
@@ -150,7 +150,7 @@
                         "isIframe": false,
                         "isAffix": false,
                         "auth": [
-                            "gis:visualization-fashPoint:view"
+                            "gis:visualization-flashPoint:view"
                         ]
                     }
                 }
