@@ -1,0 +1,1 @@
+import{at as o}from"./index.1705233370182.js";function e(){return o({url:"/config/demo/earthquakes/earthquakes.json",method:"get"})}function r(){return o({url:"/config/demo/cors/cors.json",method:"get"})}function t(){return o({url:"/config/demo/cors/corsdata.json",method:"get"})}export{r as a,e as b,t as g};
