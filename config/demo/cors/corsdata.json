@@ -1,0 +1,120 @@
+{
+    "Rows": [{
+            "rely_units": null,
+            "station_oname": "station1",
+            "is_ok": 1,
+            "type": 3,
+            "mapx": 13511860.394400001,
+            "mapy": 3647704.84461,
+            "station_name": "station1"
+        },
+        {
+            "rely_units": "",
+            "station_oname": "station2",
+            "is_ok": 1,
+            "type": 3,
+            "mapx": 13515577.621200001,
+            "mapy": 3664552.9962200001,
+            "station_name": "station2"
+        },
+        {
+            "rely_units": null,
+            "station_oname": "station3",
+            "is_ok": 1,
+            "type": 3,
+            "mapx": 13460962.900900001,
+            "mapy": 3647783.0984100001,
+            "station_name": "station3"
+        },
+        {
+            "rely_units": null,
+            "station_oname": "station4",
+            "is_ok": 1,
+            "type": 3,
+            "mapx": 13508654.508400001,
+            "mapy": 3598084.2691600001,
+            "station_name": "station4"
+        },
+        {
+            "rely_units": null,
+            "station_oname": "station5",
+            "is_ok": 1,
+            "type": 3,
+            "mapx": 13562364.285399999,
+            "mapy": 3618758.4868299998,
+            "station_name": "station5"
+        },
+        {
+            "rely_units": null,
+            "station_oname": "station6",
+            "is_ok": 1,
+            "type": 3,
+            "mapx": 13496288.3397,
+            "mapy": 3682808.5498000002,
+            "station_name": "station6"
+        },
+        {
+            "rely_units": null,
+            "station_oname": "station7",
+            "is_ok": 1,
+            "type": 3,
+            "mapx": 13554184.3849,
+            "mapy": 3661211.1983099999,
+            "station_name": "station7"
+        },
+        {
+            "rely_units": null,
+            "station_oname": "station8",
+            "is_ok": 1,
+            "type": 3,
+            "mapx": 13523126.1066,
+            "mapy": 3685249.0458999998,
+            "station_name": "station8"
+        },
+        {
+            "rely_units": "station9",
+            "station_oname": "CMDT",
+            "is_ok": 1,
+            "type": 1,
+            "mapx": 13562935.070900001,
+            "mapy": 3701039.6201499999,
+            "station_name": "station9"
+        },
+        {
+            "rely_units": "",
+            "station_oname": "station10",
+            "is_ok": 1,
+            "type": 3,
+            "mapx": 13507984.6688,
+            "mapy": 3726349.42368,
+            "station_name": "station10"
+        },
+        {
+            "rely_units": "",
+            "station_oname": "station11",
+            "is_ok": 1,
+            "type": 3,
+            "mapx": 13607817.878,
+            "mapy": 3687661.5693299999,
+            "station_name": "station11"
+        },
+        {
+            "rely_units": "",
+            "station_oname": "station12",
+            "is_ok": 1,
+            "type": 3,
+            "mapx": 13587453.446599999,
+            "mapy": 3586237.5744500002,
+            "station_name": "station12"
+        },
+        {
+            "rely_units": "",
+            "station_oname": "station13",
+            "is_ok": 1,
+            "type": 3,
+            "mapx": 13655930.3147,
+            "mapy": 3614591.28645,
+            "station_name": "station13"
+        }
+    ]
+}

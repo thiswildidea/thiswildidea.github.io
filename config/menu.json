@@ -52,11 +52,11 @@
                     }
                 },
                 {
-                    "name": "/demo/skyline",
-                    "path": "/demo/skyline",
-                    "component": "/gis/demo/skyline/index",
+                    "name": "/demo/cors",
+                    "path": "/demo/cors",
+                    "component": "/gis/demo/cors/index",
                     "meta": {
-                        "title": "message.router.gis.demo.skyline",
+                        "title": "message.router.gis.demo.cors",
                         "isHide": false,
                         "icon": "elementUser",
                         "isKeepAlive": false,
@@ -64,7 +64,7 @@
                         "isIframe": false,
                         "isAffix": false,
                         "auth": [
-                            "gis:demo-skyline:view"
+                            "gis:demo-cors:view"
                         ]
                     }
                 }
