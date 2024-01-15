@@ -1,0 +1,21 @@
+{
+    "featurelayerurl": "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Landscape_Trees/FeatureServer/0",
+    "camera": {
+        "fov": 55,
+        "heading": 359.55504226841555,
+        "position": {
+            "x": 6968041.627836507,
+            "y": 2359762.3844591994,
+            "z": 
+24839420.808326744
+        },
+        "tilt": 0.909255567950968
+    },
+    "cameraoptions": {
+        "speedFactor": 0.1,
+        "duration": 4000,
+        "maxDuration": 4000,
+        "easing": "in-out-expo"
+
+    }
+}
