@@ -779,7 +779,7 @@
                     "meta": {
                         "title": "message.router.gis.function.menucenter",
                         "isHide": true,
-                        "icon": "elementUser",
+                        "icon": "esri-icon-function",
                         "isKeepAlive": false,
                         "isLink": "",
                         "isIframe": false,
@@ -796,7 +796,7 @@
                     "meta": {
                         "title": "message.router.gis.function.mars3d",
                         "isHide": false,
-                        "icon": "elementUser",
+                        "icon": "esri-icon-mars",
                         "isKeepAlive": false,
                         "isLink": "",
                         "isIframe": false,

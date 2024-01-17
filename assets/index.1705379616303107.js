@@ -1,1 +1,0 @@
-import{at as t}from"./index.1705379616303.js";function e(){return t({url:"/config/datatype/featurelayer.json",method:"get"})}function o(){return t({url:"/config/datatype/geojson.json",method:"get"})}export{o as a,e as g};
