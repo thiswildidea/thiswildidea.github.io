@@ -167,7 +167,41 @@
                         "isIframe": false,
                         "isAffix": false,
                         "auth": [
-                            "gis:visualization-flashPoint:view"
+                            "gis:visualization-cloud:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/visualization/spriteLine",
+                    "path": "/visualization/spriteLine",
+                    "component": "/gis/visualization/spriteLine/index",
+                    "meta": {
+                        "title": "message.router.gis.visualization.spriteLine",
+                        "isHide": false,
+                        "icon": "esri-icon-cloud",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:visualization-spriteLine:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/visualization/fireParticle",
+                    "path": "/visualization/fireParticle",
+                    "component": "/gis/visualization/fireParticle/index",
+                    "meta": {
+                        "title": "message.router.gis.visualization.fireParticle",
+                        "isHide": false,
+                        "icon": "esri-icon-cloud",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:visualization-fireParticle:view"
                         ]
                     }
                 }
@@ -601,6 +635,60 @@
             ]
         },
         {
+            "name": "/function",
+            "path": "/function",
+            "component": "Layout",
+            "redirect": "/function/menucenter",
+            "alwaysShow": true,
+            "meta": {
+                "title": "message.router.gis.function.menutitle",
+                "isHide": false,
+                "icon": "esri-icon-function",
+                "isKeepAlive": true,
+                "isLink": "",
+                "isIframe": false,
+                "isAffix": false,
+                "auth": ["gis:function:view"]
+            },
+            "children": [{
+                    "name": "/function/menucenter",
+                    "path": "/function/menucenter",
+                    "component": "/gis/function/menucenter/index",
+                    "meta": {
+                        "title": "message.router.gis.function.menucenter",
+                        "isHide": true,
+                        "icon": "esri-icon-function",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:function-menucenter:view"
+                        ]
+                    }
+                },
+                {
+                    "name": "/function/mars3d",
+                    "path": "/function/mars3d",
+                    "component": "/gis/function/mars3d/index",
+                    "meta": {
+                        "title": "message.router.gis.function.mars3d",
+                        "isHide": false,
+                        "icon": "esri-icon-mars",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:function-mars3d:view"
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+   "deve":[
+        {
             "name": "/query",
             "path": "/query",
             "component": "Layout",
@@ -755,58 +843,5 @@
                     }
                 }
             ]
-        },
-        {
-            "name": "/function",
-            "path": "/function",
-            "component": "Layout",
-            "redirect": "/function/menucenter",
-            "alwaysShow": true,
-            "meta": {
-                "title": "message.router.gis.function.menutitle",
-                "isHide": false,
-                "icon": "esri-icon-function",
-                "isKeepAlive": true,
-                "isLink": "",
-                "isIframe": false,
-                "isAffix": false,
-                "auth": ["gis:function:view"]
-            },
-            "children": [{
-                    "name": "/function/menucenter",
-                    "path": "/function/menucenter",
-                    "component": "/gis/function/menucenter/index",
-                    "meta": {
-                        "title": "message.router.gis.function.menucenter",
-                        "isHide": true,
-                        "icon": "esri-icon-function",
-                        "isKeepAlive": false,
-                        "isLink": "",
-                        "isIframe": false,
-                        "isAffix": false,
-                        "auth": [
-                            "gis:function-menucenter:view"
-                        ]
-                    }
-                },
-                {
-                    "name": "/function/mars3d",
-                    "path": "/function/mars3d",
-                    "component": "/gis/function/mars3d/index",
-                    "meta": {
-                        "title": "message.router.gis.function.mars3d",
-                        "isHide": false,
-                        "icon": "esri-icon-mars",
-                        "isKeepAlive": false,
-                        "isLink": "",
-                        "isIframe": false,
-                        "isAffix": false,
-                        "auth": [
-                            "gis:function-mars3d:view"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
+        }]
 }
