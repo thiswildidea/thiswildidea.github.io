@@ -178,7 +178,7 @@
                     "meta": {
                         "title": "message.router.gis.visualization.spriteLine",
                         "isHide": false,
-                        "icon": "esri-icon-cloud",
+                        "icon": "esri-icon-spriteLine",
                         "isKeepAlive": false,
                         "isLink": "",
                         "isIframe": false,
@@ -195,7 +195,7 @@
                     "meta": {
                         "title": "message.router.gis.visualization.fireParticle",
                         "isHide": false,
-                        "icon": "esri-icon-cloud",
+                        "icon": "esri-icon-fire",
                         "isKeepAlive": false,
                         "isLink": "",
                         "isIframe": false,
@@ -639,7 +639,7 @@
                     "meta": {
                         "title": "message.router.gis.widgets.swipe",
                         "isHide": false,
-                        "icon": "esri-icon-layer",
+                        "icon": "esri-icon-swipe",
                         "isKeepAlive": false,
                         "isLink": "",
                         "isIframe": false,
