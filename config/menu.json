@@ -631,6 +631,23 @@
                             "gis:widgets-layerlist:view"
                         ]
                     }
+                },
+                {
+                    "name": "/widgets/swipe",
+                    "path": "/widgets/swipe",
+                    "component": "/gis/widgets/swipe/index",
+                    "meta": {
+                        "title": "message.router.gis.widgets.swipe",
+                        "isHide": false,
+                        "icon": "esri-icon-layer",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:widgets-swipe:view"
+                        ]
+                    }
                 }
             ]
         },

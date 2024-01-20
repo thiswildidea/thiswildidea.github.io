@@ -1,0 +1,10 @@
+{
+    "infrared": {
+        "url": "https://tiles.arcgis.com/tiles/P3ePLMYs2RVChkJx/arcgis/rest/services/WV03_Kilauea_20180519_ShortwaveInfrared/MapServer"
+    },
+    "nearInfrared": {
+        "url": "https://tiles.arcgis.com/tiles/P3ePLMYs2RVChkJx/arcgis/rest/services/WV03_Kilauea_20180519_NearInfrared/MapServer",
+        "maxScale": 3000
+    },
+    "center": [-154.88, 19.46]
+}

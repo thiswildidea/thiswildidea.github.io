@@ -1,0 +1,1 @@
+import{at as t}from"./index.1705752798878.js";function e(){return t({url:"/config/widgets/layerlist.json",method:"get"})}function i(){return t({url:"/config/widgets/swipe/swipe.json",method:"get"})}export{i as a,e as g};
