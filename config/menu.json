@@ -648,6 +648,23 @@
                             "gis:widgets-swipe:view"
                         ]
                     }
+                },
+                {
+                    "name": "/widgets/locate",
+                    "path": "/widgets/locate",
+                    "component": "/gis/widgets/locate/index",
+                    "meta": {
+                        "title": "message.router.gis.widgets.locate",
+                        "isHide": false,
+                        "icon": "esri-icon-locate",
+                        "isKeepAlive": false,
+                        "isLink": "",
+                        "isIframe": false,
+                        "isAffix": false,
+                        "auth": [
+                            "gis:widgets-locate:view"
+                        ]
+                    }
                 }
             ]
         },
