@@ -1,0 +1,1 @@
+import{au as t}from"./index.1763363051054.js";function e(){return t({url:"/config/widgets/layerlist.json",method:"get"})}function o(){return t({url:"/config/widgets/swipe/swipe.json",method:"get"})}function n(){return t({url:"/config/widgets/locate/locate.json",method:"get"})}export{n as a,o as b,e as g};
